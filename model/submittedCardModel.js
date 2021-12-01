@@ -37,6 +37,7 @@ const SubmittedCardModel = new Schema(
         designation:String,
         evaluationPeriod: Date,
         dateCreated: Date,
+        owner: String,
      
     }
 )

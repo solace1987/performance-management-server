@@ -75,7 +75,8 @@ const signIn = async (req, res) => {
                _id: user._id,
                email: user.email,
                department: user.department,
-               role: user.role
+               role: user.role,
+               scorecardId: user.scorecardId
            }
 
        })
@@ -140,7 +141,7 @@ const signout = (req, res) => {
 
     try {
  
-        let scoreCard = await ScoreCard.findById(id)
+        let scoreCard = await ScoreCard.find({_id:id},{_id:0})
  
         if (!scoreCard)
         {
@@ -151,8 +152,7 @@ const signout = (req, res) => {
  
             })
          }
- 
-        req.profile = scoreCard
+         req.profile = scoreCard[0]
  
         next()
  

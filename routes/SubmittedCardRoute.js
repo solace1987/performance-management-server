@@ -7,6 +7,11 @@ import { requireSignin,getSubmittedCardByID  } from '../controller/authCtr.js'
 
 const submittedcardRouter = express.Router();
 
+submittedcardRouter.route('/allsubmitted')
+    .get(requireSignin,async (req,res)=>{
+        const submittedCard = new SubmittedCard(req.body);
+        console.log(req.query)
+    })
 submittedcardRouter.route('/submittedcard')
     .post(requireSignin, async (req, res) => {
 
