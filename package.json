@@ -17,6 +17,7 @@
     "express-jwt": "^6.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.14",
+    "nodemailer": "^6.7.2",
     "validator": "^13.6.0"
   },
   "nodemonConfig": {

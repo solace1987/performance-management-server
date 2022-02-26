@@ -9,10 +9,12 @@ const kpi = new Schema(
         tracking: String,
         selfScore: Number,
         LineHeadScore: Number,
+        hodScore:Number,
         thirdPartyScore: Number,
         weight: Number,
         Rating: Number,
-        WeightbyRating: Number
+        WeightbyRating: Number,
+        comment:String
     })
 
 const kra = new Schema(
@@ -35,9 +37,10 @@ const SubmittedCardModel = new Schema(
         department:String,
         unit: String,
         designation:String,
-        evaluationPeriod: Date,
-        dateCreated: Date,
+        evaluationPeriod: String,
+        dateSubmited: {type:Date, default:Date.now()},
         owner: String,
+        staff: String,
      
     }
 )
